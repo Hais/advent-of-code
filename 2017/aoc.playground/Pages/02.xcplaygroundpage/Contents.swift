@@ -12,19 +12,16 @@ let vals = content.split(separator: "\n").map { $0.split(separator: "\t").map { 
 
 let part1: (([[Int]]) -> Int) = { $0.map{ $0.sorted() }.map { $0.last! - $0.first! }.reduce(0, +) }
 
-
-let part1Example = [
-    [5, 9, 1, 5],
-    [7, 5, 3],
-    [2, 4, 6, 8]
-]
+let part1Example = [[5, 9, 1, 5], [7, 5, 3], [2, 4, 6, 8]]
 XCTAssertEqual(part1(part1Example), 18)
+
+
 
 let part2: (([[Int]]) -> Int) = {
     $0.map { arr -> Int in
-        return arr.enumerated().makeIterator().flatMap { idx, val -> Int? in
-            guard let found = arr[(idx + 1)...].first(where: { val % $0 == 0 || $0 % val == 0 }) else { return nil }
-            return max(found / val, val / found)
+        return arr.flatMap { val -> Int? in
+            guard let found = arr.first(where: { val != $0 && val % $0 == 0 }) else { return nil }
+            return val / found
         }.first!
     }.reduce(0, +)
 }
