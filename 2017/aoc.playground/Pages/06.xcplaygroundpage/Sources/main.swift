@@ -5,7 +5,7 @@ struct History: Hashable {
     let c: Int
     
     var hashValue: Int {
-        return n.map{"\($0)"}.joined(separator: ",").hashValue
+        return "\(n)".hashValue
     }
     
     static func == (lhs: History, rhs: History) -> Bool {

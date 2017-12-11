@@ -5,7 +5,7 @@ public class P {
     var number: Int = 0
     var c: [String] = []
     var child: [P] = []
-    init(name: String, number: Int, childStrings: [String]) {
+    public init(name: String, number: Int, childStrings: [String]) {
         self.name = name
         self.number = number
         self.c = childStrings
