@@ -13,7 +13,7 @@ let compFns: [String: ((Int, Int) -> Bool)] = [
     "<=": { $0 <= $1 },
     ">=": { $0 >= $1 },
     "!=": { $0 != $1 },
-    "==": { $1 == $1 }
+    "==": { $0 == $1 }
 ]
 
 let modFns: [String: (Int, Int) -> Int] = [
@@ -30,15 +30,19 @@ let makeInstruction: ([String]) -> Instruction = {(
     condition: (name: $0[4], fn: compFns[$0[5]]!, val: Int($0[6])!)
 )}
 
+var highest = 0
+let trackHighest: (Int) -> Int = { highest = max(highest, $0); return $0 }
+
 let output =
     input
     .map(makeInstruction)
     .reduce(into: [String: Int]()) { d, i in
         let (m, c) = i
         guard c.fn(d[c.name] ?? 0, c.val) else { return }
-        d[m.name] = m.fn(d[m.name] ?? 0, m.val)
+        d[m.name] = trackHighest(m.fn(d[m.name] ?? 0, m.val))
     }
 
 print("Part 1 is", output.values.sorted().last!)
+print("Part 2 is", highest)
 
 //: [Next](@next)
