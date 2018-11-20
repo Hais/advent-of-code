@@ -36,3 +36,6 @@ Puzzle | Status
 [Day 9: Stream Processing](https://adventofcode.com/2017/day/9) | [Complete](2017/aoc.playground/Pages/09.xcplaygroundpage/Contents.swift)
 [Day 10: Knot Hash](https://adventofcode.com/2017/day/10) | `¯\_(ツ)_/¯`
   
+
+## License
+This project is licensed under [GLWTS](./LICENSE)
