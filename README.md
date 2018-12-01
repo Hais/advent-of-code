@@ -14,7 +14,7 @@ Xcode 10.1 - Swift 4.2.1
 
 Puzzle | Status
 ------ | ------
-Day 1 | TBD
+[Day 1: Chronal Calibration](https://adventofcode.com/2018/day/1) | [Complete](2018/aoc.playground/Pages/01.xcplaygroundpage/Contents.swift)
 
 
 ### 2017  
