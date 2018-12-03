@@ -28,14 +28,13 @@ var intersecting = Array(repeating: false, count: claims.count + 1)
 for c in claims {
     for x in c.x..<c.x+c.width {
         for y in c.y..<c.y+c.height {
-            // 0 = not claimed; 0< = claimed once; <0 = claimed 1+ times
+            // 0 = not claimed; 0< = claimed once
             let val = grid[x][y]
             if val == 0 {
                 grid[x][y] = c.ID
                 continue
             } else if val > 0 {
                 intersecting[val] = true
-                grid[x][y] * -1
             }
             intersecting[c.ID] = true
         }
