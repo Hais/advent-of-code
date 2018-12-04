@@ -17,6 +17,7 @@ Puzzle | Status
 [Day 1: Chronal Calibration](https://adventofcode.com/2018/day/1) | [Complete](2018/aoc.playground/Pages/01.xcplaygroundpage/Contents.swift)
 [Day 2: Inventory Management System](https://adventofcode.com/2018/day/2) | [Complete](2018/aoc.playground/Pages/02.xcplaygroundpage/Contents.swift)
 [Day 3: No Matter How You Slice It](https://adventofcode.com/2018/day/3) | [Complete](2018/aoc.playground/Pages/03.xcplaygroundpage/Contents.swift)
+[Day 4: Repose Record](https://adventofcode.com/2018/day/4) | [Complete](2018/aoc.playground/Pages/04.xcplaygroundpage/Contents.swift)
 
 ### 2017  
 
